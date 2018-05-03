@@ -28,7 +28,7 @@ a {
 .wTop>span {
 	margin: 1vmin 0;
 }
-.wTop>span>input {
+input[type="text"] {
 	padding: 2px 4px;
 }
 .content {
