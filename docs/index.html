@@ -4,11 +4,11 @@
 	<meta charset="UTF-8">
 	<meta name='viewport' content='width=device-width,initial-scale=1.0,user-scalable=no'>
 	<title>websocket测试平台</title>
-	<link rel="stylesheet" href="./resource/amazeui/css/amazeui.min.css">
-	<link rel="stylesheet" type="text/css" href="./resource/iconfont/iconfont.css">
-	<link rel="stylesheet" href="./resource/stylesheets/common.css">
-	<link rel="stylesheet" href="./resource/stylesheets/websocket.css">
-	<script src="./resource/javascripts/vue.min.js"></script>
+	<link rel="stylesheet" href="/resource/amazeui/css/amazeui.min.css">
+	<link rel="stylesheet" type="text/css" href="/resource/iconfont/iconfont.css">
+	<link rel="stylesheet" href="/resource/stylesheets/common.css">
+	<link rel="stylesheet" href="/resource/stylesheets/websocket.css">
+	<script src="/resource/javascripts/vue.min.js"></script>
 </head>
 <body>
 	<div id='websocket'>
@@ -48,21 +48,21 @@
 						<button>关机</button> -->
 					</li>
 					<li class='cfix'>
-						<span class='am-u-md-6 am-u-sm-6 am-u-xs-12'>
+						<span class='am-u-md-6 am-u-sm-12 am-u-xs-12'>
 							<label for="">剩余流量：</label>
 							<input type="text" v-model='setObj.reFlow'>
 						</span>
-						<span class='am-u-md-6 am-u-sm-6 am-u-xs-12'>
+						<span class='am-u-md-6 am-u-sm-12 am-u-xs-12'>
 							<label for="">剩余天数：</label>
 							<input type="text" v-model='setObj.reDay'>
 						</span>
 					</li>
 					<li class='cfix'>
-						<span class='am-u-md-6 am-u-sm-6 am-u-xs-12'>
+						<span class='am-u-md-6 am-u-sm-12 am-u-xs-12'>
 							<label for="">总&nbsp;&nbsp;流&nbsp;&nbsp;量：</label>
 							<input type="text" v-model='setObj.allFlow'>
 						</span>
-						<span class='am-u-md-6 am-u-sm-6 am-u-xs-12'>
+						<span class='am-u-md-6 am-u-sm-12 am-u-xs-12'>
 							<label for="">总&nbsp;&nbsp;天&nbsp;&nbsp;数：</label>
 							<input type="text" v-model='setObj.allDay'>
 						</span>
@@ -109,8 +109,8 @@
 			</table>
 		</div>
 	</div>
-	<script src="./resource/javascripts/websocket.js"></script>
-	<script src="./resource/javascripts/public.js"></script>
+	<script src="/resource/javascripts/websocket.js"></script>
+	<script src="/resource/javascripts/public.js"></script>
 	<script>
 		var websocket = new Vue({
 			el: '#websocket',
@@ -150,8 +150,11 @@
 				}
 			},
 			mounted(){
-				this.url = '120.78.184.0';
-				this.port = '6001';
+				this.url = 'localhost';
+				this.port = '8181';
+				
+				// this.url = '120.78.184.0';
+				// this.port = '6001';
 
 				// this.receive = [{
 				// 	PackType: 'login',
