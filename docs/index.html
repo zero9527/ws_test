@@ -34,10 +34,10 @@
 				<ul>
 					<label for="">水机状态：&emsp;<span v-text='status'></span></label>
 					<div>
-						<p><label for="">租赁模式：</label><span v-text='showObj.leasingmode'></span></p>
+						<p><label for="">租赁模式：</label><span v-text='showObj.leasingmode'></span> <span v-text='leasingmodeList[showObj.leasingmode]'></span></p>
 					</div>
 					<div>
-						<p><label for="">滤芯模式：</label><span v-text='showObj.filtermode'></span></p>
+						<p><label for="">滤芯模式：</label><span v-text='showObj.filtermode'></span> <span v-text='filtermodeList[showObj.filtermode]'></span></p>
 					</div>
 					<div>
 						<label for="">滤芯详情：</label>
@@ -164,6 +164,10 @@
 						DeviceStause: '',	//设备状态码
 						PackType: 'SetData',	// 数据包类型
 					},
+					// 租赁模式集合
+					leasingmodeList: {'0':'零售型','1':'按流量计费','2':'按时间计费','3':'时长和流量套餐','4':'商务型'},
+					// 滤芯模式集合
+					filtermodeList: {'0':'按时长','1':'按流量','2':'时长和流量'},
 					showObj: {
 						reFlow: '',			// 剩余流量
 						reDay: '',			// 剩余天数
