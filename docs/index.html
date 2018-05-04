@@ -209,6 +209,8 @@
 				link: function(){
 					websocket.wsurl = 'ws://' + websocket.url + ':' + websocket.port;
 					websocket.login['DeviceID'] = websocket.deviceid;	// 登录包
+					websocket.setData['DeviceID'] = websocket.deviceid;	// 查询包
+					websocket.setData['DeviceStause'] = 0;	// 查询包
 					if(!websocket.url){
 						noticeFn({text:'请输入域名'});
 						return
